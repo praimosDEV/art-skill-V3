@@ -1,0 +1,133 @@
+==============================================================
+ 05 - EXEMPLOS PREENCHIDOS, VERSAO CURTA E INSTRUCAO PARA GEM
+==============================================================
+
+--------------------------------------------------------------
+A. EXEMPLO PREENCHIDO: CENA DOS ESQUELETOS (PRESET 01)
+--------------------------------------------------------------
+(Depois de rodar a ETAPA A e confirmar o inventario, cole isto.)
+
+TAREFA: EDICAO DE IMAGEM (restyle). Redesenhe a imagem anexada em um novo
+estilo visual. Nao e uma criacao nova.
+
+CONTAGEM TRAVADA: 3 personagens principais (esqueleto arqueiro a esquerda,
+esqueleto mago barbudo ao centro com capa roxa e cajado escuro com cristal
+roxo facetado, esqueleto guerreiro a direita com haste longa) e 2
+esqueletos pequenos de fundo. Fogo laranja ao fundo (esquerda e direita).
+Nenhum personagem, arma ou objeto pode ser adicionado, removido ou
+trocado. Cabecas e corpos permanecem em blocos cubicos.
+
+MANTER: composicao, poses, expressoes, enquadramento 16:9, angulo de
+camera, floresta com troncos altos, raios de luz diagonais, posicao de
+cada elemento.
+
+ESTILO: ilustracao de animacao 2D cartum com iluminacao cinematografica,
+cel-shading profissional. Contorno limpo, mais grosso na silhueta, na cor
+escura do preenchimento. Cores chapadas, 3 a 4 tons por material, cortes
+duros. Sombras coloridas de borda dura seguindo o volume. Texturas em
+manchas planas. Sem aparencia de render 3D ou motor de jogo.
+
+PALETA (60/30/10):
+Principal: #1B6F80 (petroleo-ciano); sombras #0B2A3A
+Complementar: #7B3FBF (roxo)
+Destaque: #3CF2F2 (olhos e brilhos) + laranja #F2591C (fogo distante)
+Luz principal: ciano claro #7FFAF0, alto-esquerda, raios diagonais planos
+Luz de contorno: #9DFBFF nas bordas dos esqueletos
+Ossos: base #8FA3B8, sombra #4E5F78, luz #C9D8E8
+
+NEVOA (camada final): faixas chapadas #2A7F8F, 15 a 20% de opacidade, no
+plano medio e no fundo, mais densa no chao. Sem lavar cores, sem cobrir os
+personagens, sem mudar a luz.
+
+SAIDA: uma imagem 16:9, alta resolucao, sem texto nem marca d'agua.
+
+EVITAR: personagens ou objetos novos, duplicatas, elementos fantasmas,
+troca de arma ou personagem, elementos de outras imagens, 3D/realismo,
+gradientes, sombras pretas.
+
+--------------------------------------------------------------
+B. VERSAO CURTA (USO RAPIDO, QUANDO JA CONHECE O FLUXO)
+--------------------------------------------------------------
+Edite a imagem anexada (restyle, nao crie nada novo). Mantenha exatamente
+personagens, quantidade, poses, objetos, cenario, enquadramento e
+composicao. Estilo: animacao 2D cartum cel-shading com iluminacao
+cinematografica; contorno limpo em tom escuro do preenchimento; cores
+chapadas, 3 a 4 tons por material com cortes duros; sombras coloridas de
+borda dura; uma luz principal + rim light; brilho so em elementos
+emissivos; texturas em manchas planas. Paleta 60/30/10: principal [HEX],
+complementar [HEX], destaque [HEX], sombras [HEX]. Por ultimo, adicione
+nevoa suave (15%) no plano medio e no fundo, sem alterar cores, luz nem
+cobrir o primeiro plano. Uma imagem, mesma proporcao, sem texto. Sem
+elementos novos, duplicatas, fantasmas ou troca de personagens.
+
+--------------------------------------------------------------
+C. INSTRUCAO PARA CRIAR UM "GEM" NO GEMINI
+--------------------------------------------------------------
+Passo a passo: no Gemini, abra Gems > Novo Gem. Cole o texto abaixo no
+campo de instrucoes e anexe como conhecimento os arquivos 02, 03 e 04
+(o recurso de Gems permite anexar arquivos; se a sua conta nao mostrar
+essa opcao, anexe os arquivos diretamente em cada chat).
+
+--- INICIO DA INSTRUCAO DO GEM ---
+Voce e um diretor de arte especialista em re-renderizacao de imagens para
+um estilo unico de animacao 2D cartum com iluminacao cinematografica.
+
+FLUXO OBRIGATORIO
+1. Ao receber uma imagem, NAO gere nada ainda. Faca o INVENTARIO:
+   quantidade exata de personagens, objetos, elementos de fundo,
+   enquadramento, iluminacao atual, paleta atual (HEX) e proponha uma
+   paleta 60/30/10 com sombra e luz. Termine perguntando se pode gerar.
+2. Ao receber confirmacao, gere UMA imagem que seja um restyle da imagem
+   anexada, mantendo travados: personagens (identidade, quantidade,
+   posicao, pose, expressao, roupa, itens), objetos, cenario, camera,
+   enquadramento, proporcao.
+3. Aplique as regras dos arquivos de conhecimento (guia de estilo,
+   paletas e iluminacao, consistencia e correcoes).
+
+REGRAS DE ESTILO (resumo)
+- 2D cel-shading; contorno limpo em tom escuro do preenchimento.
+- Cores chapadas; 3 a 4 tons por material; cortes duros.
+- Sombras coloridas, geometricas, de borda dura; nunca preto.
+- Uma luz chave + rim light; brilho so em emissivos.
+- Composicao de cor 60/30/10; contraste quente x frio; foco com maior
+  saturacao.
+- Nevoa = camada final, 10 a 25%, medio e fundo, sem lavar cores nem
+  cobrir o primeiro plano.
+
+PROIBIDO
+Adicionar ou remover personagens/objetos, duplicatas, elementos fantasmas,
+trocar personagem ou item, usar elementos de outras imagens, aparencia de
+3D/realismo/motor de jogo, gradientes suaves em personagens, sombras
+pretas, texto, marca d'agua.
+
+CORRECOES
+Se o usuario apontar um erro, aplique SOMENTE a correcao pedida, mantendo
+o resto. Use os prompts de correcao do arquivo de conhecimento.
+
+TOM
+Responda em portugues do Brasil, direto, sem enrolar. Em duvida sobre a
+paleta ou a luz, sugira 2 opcoes com HEX.
+--- FIM DA INSTRUCAO DO GEM ---
+
+--------------------------------------------------------------
+D. PROTOCOLO DE TESTE (PARA MEDIR ESTABILIDADE)
+--------------------------------------------------------------
+1. Escolha 3 imagens de teste de tipos diferentes (grupo, retrato,
+   cenario).
+2. Para cada uma, rode Etapa A + Etapa B em chat novo. Gere 2 vezes.
+3. Aplique o checklist do arquivo 04 (secao 7). Anote nota de 0 a 11.
+4. Se a media for menor que 9, ajuste UM item por vez: paleta, luz, trava
+   de contagem ou nevoa. Nao mude varios ao mesmo tempo.
+5. Guarde os prompts finais que funcionaram e as imagens aprovadas para
+   usar como referencia de estilo em novos projetos (regra R5 do 04).
+
+--------------------------------------------------------------
+E. PREENCHER PARA NOVAS IMAGENS (MODELO EM BRANCO)
+--------------------------------------------------------------
+Preset escolhido: ______ (arquivo 03)
+Contagem travada: ___ principais, ___ de fundo, ___ objetos
+Itens que mais mudam: ______________________
+Principal (60%): #______   Complementar (30%): #______
+Destaque (10%): #______    Sombras: #______   Luz: #______
+Direcao da luz: ______  (L1 a L5 do arquivo 03)
+Cor e densidade da nevoa: #______ / ___%

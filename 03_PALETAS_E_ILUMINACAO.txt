@@ -1,0 +1,160 @@
+==============================================================
+ 03 - BIBLIOTECA DE PALETAS E ILUMINACAO
+ Copie os blocos e cole nos campos [3] PALETA e [4] LUZ do prompt mestre.
+ HEX sao aproximados; a IA pode variar levemente, o que importa e a
+ relacao entre as cores (60/30/10 e quente x frio).
+==============================================================
+
+COMO ESCOLHER
+1. Identifique o clima da cena (noite, acao, espaco, dia, etc.).
+2. Escolha o preset mais proximo.
+3. Se a imagem original ja tiver uma cor forte (ex.: olhos ciano), use
+   essa cor como DESTAQUE e ajuste o preset em torno dela.
+4. Uma imagem = um preset. Nao misture dois presets.
+
+--------------------------------------------------------------
+PRESET 01 - FLORESTA NOTURNA / MAGIA FRIA
+(baseado na cena dos esqueletos)
+--------------------------------------------------------------
+Principal (60%):     petroleo-ciano  #1B6F80  (sombras profundas #0E3A4A)
+Complementar (30%):  roxo-violeta    #7B3FBF  (sombra #3E1F6B)
+Destaque (10%):      ciano brilhante #3CF2F2  (olhos, brilho) + laranja
+                     fogo #F2591C como ponto quente distante
+Cor das sombras:     azul-petroleo escuro #0B2A3A
+Luz principal:       ciano claro #7FFAF0, vinda do alto, com raios
+                     diagonais planos atravessando as arvores
+Luz de contorno:     ciano #9DFBFF nas bordas dos personagens
+Nevoa:               azul-petroleo #2A7F8F, 15 a 20%, mais densa no chao
+                     e entre as arvores do fundo
+Clima:               misterioso, ameacador, magico
+Personagens:         ossos em cinza-azulado (base #8FA3B8, sombra
+                     #4E5F78, luz #C9D8E8); capa roxa; cristal roxo com
+                     facetas planas (uma faceta clara voltada a luz)
+
+--------------------------------------------------------------
+PRESET 02 - ACAO / FOGO / ANIME DE GRUPO
+(baseado na cena do grupo em chamas)
+--------------------------------------------------------------
+Principal (60%):     laranja-fogo #E8541A (tons #F58A1F e #B8300F)
+Complementar (30%):  azul-real   #2A4A9A (roupas, sombras dos personagens)
+Destaque (10%):      amarelo     #FFC21A (cabelo/objeto do foco)
+Cor das sombras:     vinho #6B1E1A nas partes quentes; marinho #172A5C
+                     nas partes azuis
+Luz principal:       quente frontal-superior, forte
+Luz de contorno:     amarelo-claro #FFE38A
+Nevoa:               nao usar nevoa clara; usar fumaca/brasa laranja-
+                     escura em 10% de opacidade no fundo
+Clima:               energia, coragem, dinamismo
+Nota:                cores locais de roupa saturadas; fundo com formas de
+                     chama grandes e simples
+
+--------------------------------------------------------------
+PRESET 03 - RETRATO EPICO DE DIA / FANTASIA
+(baseado no guerreiro barbudo)
+--------------------------------------------------------------
+Principal (60%):     azul-ceu #9CCBEF (ceu) + cinza-rocha #6F7A86
+Complementar (30%):  terracota #D98F78 (pele) e magenta #C03AB4 (nuvem/
+                     energia)
+Destaque (10%):      azul-safira #2F5FBF (joia, tatuagem) + dourado
+                     #C9A13B (detalhes)
+Cor das sombras:     roxo-azulado #3B3F7A
+Luz principal:       diurna lateral, direita-alta, dura
+Luz de contorno:     azul-claro #CFE8FF
+Nevoa:               azul-claro suave 10% no fundo; sem nevoa sobre o rosto
+Clima:               poder, autoridade, mitologico
+Nota:                barba/cabelo branco: base #F2F6FA, sombra #A9C4E4
+
+--------------------------------------------------------------
+PRESET 04 - SCI-FI / MECHA / PLANETA ALIENIGENA
+(baseado na cena do mecha e piloto)
+--------------------------------------------------------------
+Principal (60%):     azul-petroleo #1F4A63 (ceu, rochas, sombras)
+Complementar (30%):  dourado-quente #F5C24A (sol em contraluz, flare)
+Destaque (10%):      vermelho #B03A2E (piloto e detalhes do mecha) +
+                     ciano #4FD8FF (elementos emissivos)
+Cor das sombras:     azul-marinho #0F2A3D
+Luz principal:       contraluz dourado atras do sujeito, flare
+                     simplificado (poucas formas de estrela/raios)
+Luz de contorno:     dourado #FFD979 nas bordas voltadas para o sol
+Nevoa:               azul-petroleo claro #6FA3B8, 15 a 25% nas montanhas
+                     e no vale; camadas de silhueta distantes
+Clima:               epico, escala grandiosa, aventura
+Nota:                metal em blocos cinza-azulado com juntas escuras e
+                     pecas em vermelho; ceu com textura pintada
+                     simplificada
+
+--------------------------------------------------------------
+PRESET 05 - ESPACO / NEBULOSA / NAVES
+(baseado na cena do espaco, cena principal do estilo)
+--------------------------------------------------------------
+Principal (60%):     ambar-laranja #D97A1A (fundo/nebulosa)
+Complementar (30%):  marrom-terra   #6B3A1E (estruturas, planeta, naves)
+                     + amarelo-esverdeado #C9B21E (transicao da nebulosa)
+Destaque (10%):      ciano #2DD4FF + verde #35D46A + azul #2F6BFF
+                     (nave protagonista, motor e brilhos)
+Cor das sombras:     marrom-escuro avermelhado #3A1D10
+Luz principal:       um sol/estrela fora do quadro, quente, lateral
+Luz de contorno:     amarelo-claro #FFD27A
+Nevoa:               nebulosa ambar 15% entre planos; objetos distantes
+                     mais claros, menos contrastados
+Clima:               explorador, isolado, contemplativo
+Nota:                estruturas com linhas finas e cortes planos;
+                     detritos e poeira em pontos pequenos chapados; so a
+                     nave protagonista usa as cores frias vivas
+
+--------------------------------------------------------------
+PRESET 06 - DESERTO / POR DO SOL
+--------------------------------------------------------------
+Principal (60%):     areia-dourado #E8B563
+Complementar (30%):  roxo-crepusculo #5B3A7A (ceu alto e sombras)
+Destaque (10%):      vermelho-coral #E0472F (sol e detalhes)
+Cor das sombras:     roxo-azulado #3B2A5E
+Luz principal:       baixa, rasante, longa; sombras compridas
+Luz de contorno:     laranja-claro #FFB878
+Nevoa:               poeira dourada 15%, mais densa no horizonte
+
+--------------------------------------------------------------
+PRESET 07 - MUNDO SUBAQUATICO / GELO / FRIO
+--------------------------------------------------------------
+Principal (60%):     azul-profundo #1E5E9A
+Complementar (30%):  turquesa #29B6B0
+Destaque (10%):      coral/rosa #FF6F61 ou dourado #FFC94A
+Cor das sombras:     azul-marinho #0C2B52
+Luz principal:       vinda de cima, raios planos em diagonal
+Nevoa:               azul-claro #7FC4E8 12 a 20%, aumenta com a
+                     profundidade
+
+--------------------------------------------------------------
+PRESET 08 - CIDADE NOTURNA / NEON
+--------------------------------------------------------------
+Principal (60%):     azul-noite #14204A
+Complementar (30%):  magenta #D6349A
+Destaque (10%):      ciano #2FE6F2 e amarelo #FFD23F
+Cor das sombras:     roxo-escuro #1C1038
+Luz principal:       neons laterais coloridos; um lado ciano e outro
+                     magenta
+Nevoa:               fumaca/neblina roxa 15%, mais densa no nivel da rua
+
+--------------------------------------------------------------
+TABELA RAPIDA DE COMBINACOES QUE FUNCIONAM
+--------------------------------------------------------------
+Laranja  <-> Azul        Acao, aventura, epico
+Ciano    <-> Roxo/Laranja Magia, misterio, noite
+Dourado  <-> Petroleo    Cinematografico, contraluz
+Magenta  <-> Azul-ceu    Fantasia, poder
+Vermelho <-> Verde-agua  Sci-fi, tecnologia
+Regra: destaque sempre e a cor MENOS presente na imagem (10%).
+
+--------------------------------------------------------------
+SETUPS DE LUZ PRONTOS (colar no campo [4])
+--------------------------------------------------------------
+L1 CONTRALUZ: fonte de luz atras do sujeito; rim light forte na silhueta;
+   rosto e frente em sombra colorida com leitura clara; flare simplificado.
+L2 LATERAL DURA: chave a 45 graus, alto-direita; meia face em sombra de
+   borda dura; rim na borda oposta.
+L3 CIMA COM RAIOS: luz vinda de cima-esquerda em raios diagonais planos
+   atravessando o cenario; personagens com luz no topo da cabeca e ombros.
+L4 AMBIENTE + EMISSIVA: pouca luz externa; cena iluminada por brilhos
+   (olhos, cristais, fogo) que tingem as bordas proximas.
+L5 FRONTAL SUAVE: para retratos e cenas de grupo; sombras curtas sob queixo
+   e objetos, rim leve.

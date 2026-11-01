@@ -1,0 +1,152 @@
+==============================================================
+ 04 - REGRAS DE CONSISTENCIA, PROBLEMAS COMUNS E CORRECOES
+==============================================================
+
+--------------------------------------------------------------
+1. REGRAS DE OURO
+--------------------------------------------------------------
+R1. Uma imagem por chat. Chat novo a cada imagem.
+R2. Imagem de referencia SEMPRE anexada antes do prompt.
+R3. Faca a ETAPA A (inventario) antes de renderizar. Corrija o inventario
+    se algo estiver errado; e mais barato do que regerar a imagem.
+R4. Nunca peca estilo + mudanca de cena juntos. Este prompt e so RESTYLE.
+R5. Nao anexe imagens de outros estilos no mesmo chat (a IA mistura
+    elementos). Se precisar de referencia de estilo, anexe UMA imagem
+    aprovada e diga: "use so como referencia de linha, cor e luz; nao
+    copie personagens, objetos ou cenario dela".
+R6. Corrija em pequenos passos no mesmo chat. Uma correcao por mensagem.
+R7. Se apos 3 correcoes nao melhorar, abra chat novo e reenvie a ETAPA A
+    + ETAPA B com o inventario corrigido.
+R8. Termos vagos geram resultados variaveis ("profissional", "bonito",
+    "de mercado"). Prefira medidas: "3 tons por material", "contorno
+    escuro", "nevoa 15%".
+
+--------------------------------------------------------------
+2. CASO CRITICO: CENA DOS ESQUELETOS COM CAJADO
+--------------------------------------------------------------
+Elementos que costumam ser alterados e devem ser travados no inventario:
+- 3 esqueletos principais: esquerda (arqueiro com arco), centro (mago
+  barbudo com capa roxa e cajado com cristal roxo), direita (guerreiro com
+  lanca/bastao longo).
+- 2 esqueletos pequenos de fundo (um atras do arqueiro, outro no alto
+  atras do da direita). NAO sao duplicatas: existem na imagem original.
+  Conte-os no inventario para a IA nao remove-los nem multiplica-los.
+- O cristal roxo e o cajado: mesma posicao, mesmo formato facetado, preso
+  na haste preta.
+- Cabecas e corpos em blocos: manter geometria cubica.
+- Olhos ciano brilhantes: sao o destaque (10%).
+- Fogo laranja ao fundo: unico ponto quente, manter.
+- Riscos tipicos: cajado vira espada; cristal muda de cor ou forma;
+  barba do mago some; aparece 4 esqueleto; fogo vira luz sobre os
+  personagens; arvores viram algo diferente.
+Linha extra para colar na Etapa B nesse caso:
+  "Existem exatamente 3 esqueletos principais e 2 esqueletos pequenos de
+   fundo. O esqueleto central segura um cajado escuro com cristal roxo
+   facetado no topo e usa capa roxa e barba longa. Nenhum outro
+   personagem, arma ou objeto pode ser adicionado ou removido."
+
+--------------------------------------------------------------
+3. LINHA "TRAVA DE CONTAGEM" (COLE NO INICIO DA ETAPA B)
+--------------------------------------------------------------
+"Contagem travada: [N] personagens principais, [N] personagens de fundo,
+[N] objetos principais ([lista]). A imagem final deve ter exatamente essas
+quantidades, nas mesmas posicoes."
+
+--------------------------------------------------------------
+4. PROMPTS DE CORRECAO (COLAR NO MESMO CHAT)
+--------------------------------------------------------------
+C1 - ELEMENTO NOVO OU DUPLICADO
+"Na imagem gerada existe [descreva o elemento] que nao esta na imagem
+original. Refaca a imagem removendo esse elemento e mantendo todo o resto
+igual. A contagem correta e [N] personagens e [N] objetos."
+
+C2 - PERSONAGEM OU OBJETO TROCADO
+"O(a) [personagem/objeto] foi alterado(a). Na imagem original ele(a) e
+[descricao exata: forma, cor, posicao, o que segura]. Restaure exatamente
+essa aparencia e posicao, mantendo o novo estilo e o restante da imagem."
+
+C3 - ESTILO AINDA PARECE 3D / RENDER DE JOGO
+"Ainda parece render 3D. Refaca em ilustracao 2D cel-shading: cores
+chapadas, maximo 3 tons por material, sombras de borda dura em cor,
+contorno escuro limpo, sem textura realista e sem gradiente dentro dos
+objetos. Mantenha composicao e elementos."
+
+C4 - CORES DEMAIS / PALETA DISPERSA
+"Reduza a paleta. Use so: principal [HEX], complementar [HEX], destaque
+[HEX], mais sombras e luzes dessas mesmas matizes. Remova cores fora da
+paleta, mantendo elementos e composicao."
+
+C5 - NEVOA DEMAIS / CORES LAVADAS
+"A nevoa esta forte demais. Reduza para 10 a 15% de opacidade, aplique so
+no plano medio e no fundo, e recupere o contraste e a saturacao do
+primeiro plano e dos personagens. Nao mude mais nada."
+
+C6 - SEM NEVOA / SEM PROFUNDIDADE
+"Adicione nevoa como camada final: faixas chapadas, 15% de opacidade, cor
+[HEX da sombra], no plano medio e no fundo. Fundo mais claro e menos
+contrastado que o primeiro plano. Nao altere cores, luz nem elementos."
+
+C7 - LUZ INCONSISTENTE
+"A iluminacao esta inconsistente. Use uma unica luz principal vindo de
+[direcao], cor [HEX], com todas as sombras no lado oposto e rim light
+[HEX] na borda oposta. Brilho so nos elementos emissivos. Mantenha o
+resto."
+
+C8 - SOMBRAS PRETAS / SUJAS
+"Troque as sombras pretas ou cinzas por sombras coloridas na cor [HEX],
+com bordas duras e formas geometricas seguindo o volume."
+
+C9 - CONTORNO FRACO OU INEXISTENTE
+"Adicione contorno limpo: mais grosso na silhueta externa e mais fino nos
+detalhes internos, na cor escura do proprio preenchimento."
+
+C10 - TEXTO / MARCA / MOLDURA
+"Remova qualquer texto, marca d'agua, logotipo ou borda. Mantenha a
+imagem inteira igual."
+
+C11 - PROPORCAO OU ENQUADRAMENTO MUDOU
+"Mantenha exatamente o enquadramento, o angulo de camera e a proporcao da
+imagem original. Nada pode ser cortado nem reposicionado."
+
+C12 - ROSTO / EXPRESSAO ALTERADA
+"Restaure o rosto de [personagem] conforme a original: [descricao da
+expressao, olhos, boca, marcas]. Mantenha o estilo aplicado."
+
+--------------------------------------------------------------
+5. DIAGNOSTICO RAPIDO
+--------------------------------------------------------------
+Sintoma                         | Causa provavel              | Acao
+--------------------------------|-----------------------------|-------
+Objeto muda de forma            | Nao estava no inventario    | C2 + inventario
+Aparecem personagens extras     | Contagem nao travada        | C1 + trava
+Imagem parece jogo/3D           | Faltam regras de 2D         | C3
+Cores lavadas                   | Nevoa forte ou sem paleta   | C5 / C4
+Varias luzes conflitantes       | Luz principal nao definida  | C7
+Resultado diferente a cada vez  | Prompt vago / chat sujo     | Chat novo + Etapa A
+Ignora a paleta                 | HEX ausente                 | C4 com HEX
+Mistura com outra imagem        | Varias imagens no chat      | R1 / R5
+
+--------------------------------------------------------------
+6. LISTA DE NEGATIVOS (COPIAR)
+--------------------------------------------------------------
+personagens novos; objetos novos; duplicatas; elementos fantasmas ou
+semitransparentes; troca de personagem; troca de arma ou item; elementos de
+outras imagens; realismo; render 3D; aparencia de motor de jogo; pintura a
+oleo; fotorrealismo; gradientes suaves em personagens; granulacao;
+poros de pele; sombras pretas; brilho em todas as superficies; excesso de
+cores; nevoa branca lavando a imagem; texto; marca d'agua; moldura.
+
+--------------------------------------------------------------
+7. CHECKLIST DE APROVACAO (RESULTADO FINAL)
+--------------------------------------------------------------
+[ ] Mesma quantidade de personagens e objetos da original
+[ ] Mesmas posicoes, poses e enquadramento
+[ ] Identidade de cada personagem preservada (rosto, roupa, arma)
+[ ] Cores chapadas, 3 a 4 tons por material, cortes duros
+[ ] Sombras em cor, formas graficas de borda dura
+[ ] Uma luz chave clara + rim light coerente
+[ ] Brilho so nos emissivos
+[ ] Paleta respeita 60/30/10
+[ ] Ponto focal com maior contraste e saturacao
+[ ] Nevoa so no medio e fundo, sem lavar o primeiro plano
+[ ] Sem texto, marca d'agua ou elementos de outras imagens

@@ -1,0 +1,152 @@
+==============================================================
+ 02 - GUIA DE ESTILO VISUAL (BIBLIA DO ESTILO)
+ Dados adicionais para a IA. Extraido das 4 imagens de referencia
+ aprovadas: grupo em chamas, guerreiro barbudo, mecha + piloto,
+ espaco/nave.
+==============================================================
+
+USO: anexe este arquivo ao chat do Gemini junto com a imagem.
+Instrucao para a IA: "Use o arquivo de estilo anexo como referencia de
+regras. Em caso de conflito, o inventario da imagem original vence sobre
+qualquer descricao de estilo."
+
+--------------------------------------------------------------
+1. DNA DO ESTILO (7 PILARES)
+--------------------------------------------------------------
+1. Formas simplificadas: a imagem e lida por silhueta e blocos de cor,
+   nao por detalhe fino.
+2. Cores chapadas: preenchimentos sem degrade dentro do objeto.
+3. Poucos tons: 3 a 4 por material, com cortes duros entre eles.
+4. Sombra grafica: formas recortadas, de borda dura, em cor (nao preto).
+5. Luz cinematografica: uma luz chave forte + rim light + brilho so onde
+   e emissivo.
+6. Contorno limpo: linha continua, cor derivada do preenchimento.
+7. Profundidade por camadas: primeiro plano contrastado, fundo atenuado
+   por nevoa e perspectiva atmosferica.
+
+--------------------------------------------------------------
+2. ANATOMIA DE UM OBJETO (CEL-SHADING EM 4 CAMADAS)
+--------------------------------------------------------------
+Camada 1 - BASE: cor local do material, chapada.
+Camada 2 - SOMBRA: mesma matiz, mais escura, ligeiramente mais fria e mais
+           saturada. Borda dura, seguindo o volume (cilindro = faixa
+           curva, plano = bloco reto).
+Camada 3 - LUZ: tom mais claro e mais quente, em faixas estreitas voltadas
+           para a fonte de luz.
+Camada 4 - RIM/REFLEXO: linha fina, clara, na borda oposta a luz chave,
+           na cor da luz ambiente (ex.: ciano em cena fria, dourado em
+           cena quente). Opcional em objetos secundarios.
+Regra: nunca misturar as camadas com gradiente. Se precisar de suavidade,
+usar apenas em ceu, nevoa e brilho emissivo.
+
+--------------------------------------------------------------
+3. LINHA / CONTORNO
+--------------------------------------------------------------
+- Silhueta externa: mais grossa (aprox. 2x a espessura interna).
+- Detalhes internos (dobras, rugas, juntas): fina.
+- Cor: tom escuro da propria cor (pele -> marrom-avermelhado escuro; metal
+  -> azul-petroleo escuro; tecido azul -> azul-marinho). Preto puro so em
+  buracos, pupilas e fendas profundas.
+- Sem linha tremida nem esboco. Terminacoes de linha afiladas.
+
+--------------------------------------------------------------
+4. LUZ E SOMBRA
+--------------------------------------------------------------
+- Uma luz chave por cena. Todas as sombras coerentes com ela.
+- Rim light na borda oposta, na cor de destaque ou na cor do ambiente.
+- Contraluz (sol/lua atras do sujeito) permitido: silhueta com rim forte e
+  face em sombra colorida, sem perder a leitura do rosto.
+- Fontes emissivas (olhos, cristal, energia, fogo, motor, sol) recebem
+  brilho suave (glow) e sao os pontos mais saturados e claros da imagem.
+- Raios de luz volumetricos: faixas planas, semitransparentes, bordas duras,
+  em angulo consistente. Nunca desfocados.
+- Sombra projetada no chao: forma unica, chapada, na cor de sombra da paleta.
+
+--------------------------------------------------------------
+5. COR E COMPOSICAO DE COR
+--------------------------------------------------------------
+- Regra 60/30/10: 60% cor principal (ambiente), 30% complementar
+  (personagens/objetos secundarios), 10% destaque (ponto focal).
+- Contraste quente x frio: sujeito e fundo em temperaturas opostas
+  (ex.: sujeito quente sobre fundo frio, ou o inverso).
+- Hierarquia de saturacao: o ponto focal e o mais saturado; o fundo e menos
+  saturado e mais claro (ou mais escuro) conforme a distancia.
+- Limite: 5 a 7 matizes no total na imagem inteira, contando variacoes de
+  luz e sombra como a mesma matiz.
+- Sombras em cor: preferir azul/roxo/petroleo em cenas quentes; vinho/
+  marrom-avermelhado em cenas frias. Nunca cinza neutro ou preto.
+
+--------------------------------------------------------------
+6. TEXTURA E MATERIAIS (COMO SIMPLIFICAR)
+--------------------------------------------------------------
+PELE: 2 a 3 tons chapados; sombra sob queixo/nariz em forma recortada;
+      rugas como linhas finas, sem poros.
+CABELO/BARBA: mechas grandes e pontudas em blocos; luz e sombra por mecha
+      (ex.: branco -> azul-claro na sombra), linhas de fio finas.
+METAL/ARMADURA: blocos com cortes retos; 1 faixa de reflexo clara + 1
+      faixa escura; parafusos e juntas como formas simples; desgaste como
+      manchas planas.
+PEDRA/ROCHA: manchas irregulares recortadas (efeito camuflagem) em 3 a 4
+      tons; sem ruido.
+TECIDO/CAPA: grandes planos com dobras marcadas por cortes de sombra;
+      borda de rim light.
+VEGETACAO: massas de folhas em silhuetas agrupadas, 3 tons; detalhes so
+      no primeiro plano.
+CEU/ESPACO: unico lugar onde gradiente suave e permitido; nuvens em
+      formas recortadas com contorno de luz.
+FOGO/ENERGIA: formas fluidas e pontudas em 3 a 4 tons (vermelho ->
+      laranja -> amarelo), nucleo mais claro.
+CRISTAL: facetas planas com um tom por faceta; faceta mais clara voltada
+      para a luz; brilho emissivo na cor de destaque.
+BLOCOS/VOXEL (personagens em cubos): manter a geometria cubica original;
+      aplicar cel-shading por face (topo mais claro, lado da sombra mais
+      escuro).
+
+--------------------------------------------------------------
+7. NEVOA E PROFUNDIDADE
+--------------------------------------------------------------
+- Camada final, aplicada depois de cor e luz.
+- 3 planos: primeiro (contraste total), medio (contraste 70%), fundo
+  (contraste 40%, mais claro/menos saturado).
+- Nevoa em faixas horizontais chapadas, opacidade 10 a 25%, cor = cor de
+  sombra/ambiente (nunca branco puro, exceto cenas de neve).
+- Mais densa na base do cenario e nos elementos distantes.
+- Nunca cobre o ponto focal nem apaga o contorno dos personagens.
+
+--------------------------------------------------------------
+8. ESTUDOS DE CASO (REFERENCIAS APROVADAS)
+--------------------------------------------------------------
+A) GRUPO EM CHAMAS (acao)
+   Fundo: chamas em 3 tons de laranja/vermelho. Personagens: cores
+   saturadas locais (amarelo, azul, verde-oliva, vermelho). Contorno
+   escuro, expressoes fortes. Contraste: fundo quente vs. roupas azuis
+   (complementar). Destaque: amarelo do cabelo do sujeito central.
+B) GUERREIRO BARBUDO (retrato)
+   Fundo: ceu azul-claro + nuvem magenta (contraste forte, poucas formas).
+   Pele terracota em 3 tons; barba branca com sombra azul-clara; armadura
+   cinza/preta com detalhe dourado e joia azul (destaque). Rocha em manchas
+   planas. Enquadramento aproximado, olhar intenso.
+C) MECHA + PILOTO (cinematografico)
+   Ceu petroleo/azul-escuro com textura pintada simplificada; sol dourado
+   atras (contraluz) gerando flare; mecha em cinza-azulado com detalhes
+   vermelhos; piloto em vermelho (mesmo destaque). Silhuetas de montanhas
+   em camadas azuladas (perspectiva atmosferica). Brilho ciano nos
+   elementos emissivos.
+D) ESPACO / NAVE (ficcao cientifica, cena "principal")
+   Cena em laranja/ambar (principal) com nebulosa amarelo-esverdeada
+   (transicao) e nave com destaque verde/azul/ciano (10%). Estruturas em
+   marrom-escuro com detalhes finos e cortes planos. Poeira e detritos
+   como pontos pequenos e chapados. Profundidade: objetos distantes mais
+   claros e menos contrastados.
+
+--------------------------------------------------------------
+9. ANTIPADROES (O QUE DESVIA DO ESTILO)
+--------------------------------------------------------------
+- Degrade suave dentro de personagens e objetos.
+- Sombras pretas ou cinza transparente.
+- Brilho em todas as superficies (so em emissivos).
+- Textura fotografica, poros, granulacao de filme.
+- Mais de uma luz chave conflitando.
+- Nevoa branca que apaga cor e contraste do primeiro plano.
+- Detalhe uniforme em toda a imagem (deve haver hierarquia de detalhe).
+- Aparencia de render 3D, PBR, motor de jogo ou ray tracing.

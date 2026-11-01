@@ -1,0 +1,170 @@
+==============================================================
+ 01 - PROMPT MESTRE
+ RE-RENDERIZACAO EM ESTILO CARTUM CINEMATOGRAFICO (v3.0 estavel)
+ Uso: Gemini (edicao de imagem a partir de imagem de referencia)
+==============================================================
+
+POR QUE ESTA VERSAO E MAIS ESTAVEL
+- Fluxo em 2 etapas: primeiro o Gemini lista o que existe na imagem
+  (inventario), depois redesenha com essa lista travada. Isso evita
+  personagens trocados, duplicatas e objetos que mudam (ex.: o cajado
+  com cristal do esqueleto).
+- Regras positivas ("mantenha X") pesam mais que negativas ("nao faca Y").
+  As proibicoes ficam em uma lista curta no final.
+- Paleta em HEX e regra 60/30/10 em vez de "cores bonitas".
+- Nevoa definida como CAMADA FINAL que nao pode alterar cor nem luz.
+- Nao cita franquias ou obras. Descreve o estilo pelas suas caracteristicas
+  (linha, cor, sombra, luz), que o Gemini interpreta de forma mais consistente.
+
+COMO USAR (a ordem importa)
+1. Abra um chat NOVO (evita contaminacao de imagens anteriores).
+2. Anexe SOMENTE a imagem a ser re-renderizada. Uma imagem por chat.
+3. Recomendado: anexe tambem os arquivos 02, 03 e 04 deste pacote.
+4. Cole a ETAPA A. Leia o inventario e corrija erros escrevendo a correcao.
+5. Cole a ETAPA B com os campos [ ] preenchidos (ou deixe vazio para modo
+   automatico, ver secao [3]).
+6. Se algo sair errado, NAO gere do zero. Use os prompts de correcao do
+   arquivo 04 no mesmo chat.
+
+==============================================================
+ ETAPA A - INVENTARIO (cole primeiro, sem gerar imagem)
+==============================================================
+
+Analise a imagem anexada e NAO gere nenhuma imagem ainda. Responda em lista:
+
+1. PERSONAGENS: quantidade exata. Para cada um: posicao (esquerda/centro/
+   direita; primeiro/segundo plano), pose, expressao, roupa, acessorios e
+   o que segura nas maos.
+2. OBJETOS IMPORTANTES: armas, cajados, cristais, veiculos, naves, livros.
+   Formato, tamanho relativo e posicao de cada um.
+3. ELEMENTOS PEQUENOS DE FUNDO: personagens distantes, fogo, construcoes,
+   plantas, detritos. Conte quantos sao.
+4. CENARIO E ENQUADRAMENTO: angulo de camera; o que ha em primeiro plano,
+   plano medio e fundo.
+5. ILUMINACAO ATUAL: direcao da luz principal, cor da luz, onde ficam as
+   fontes brilhantes (olhos, cristais, fogo, sol).
+6. PALETA ATUAL: 5 cores dominantes com HEX aproximado.
+7. PROPOSTA DE PALETA CARTUM: cor principal (60%), complementar (30%),
+   destaque (10%), cor de sombra e cor de luz, todas em HEX.
+
+Termine com a frase: "Inventario concluido. Aguardando confirmacao."
+
+==============================================================
+ ETAPA B - RENDERIZACAO (PT-BR)
+==============================================================
+
+TAREFA: EDICAO DE IMAGEM (restyle). Redesenhe a imagem anexada em um novo
+estilo visual. Nao e uma criacao nova.
+
+[1] O QUE NAO MUDA (TRAVADO)
+Use o inventario confirmado na Etapa A como lista fixa. Mantenha identicos:
+quantidade de personagens, identidade e rosto de cada um, pose, expressao,
+roupa, acessorios, objetos e armas (formato e mao que segura), cenario,
+angulo de camera, enquadramento, proporcao da imagem e a posicao e o
+tamanho relativo de cada elemento. O unico conteudo permitido e o que
+existe na imagem anexada. Formas originais que definem a identidade
+(ex.: cabecas e corpos em blocos) continuam com a mesma geometria.
+
+[2] ESTILO (E A UNICA COISA QUE MUDA)
+Ilustracao de animacao 2D cartum com iluminacao cinematografica,
+acabamento de estudio profissional, cel-shading.
+- CONTORNO: linha limpa e continua, mais grossa na silhueta externa e mais
+  fina nos detalhes internos. Cor do contorno = versao escura da cor do
+  preenchimento (nao preto puro).
+- COR: cores solidas e chapadas, sem gradiente dentro dos objetos. Maximo de
+  3 a 4 tons por material (base, sombra, luz e, opcional, reflexo/rim).
+  Divisoes nitidas e duras entre os tons.
+- SOMBRAS: formas graficas e geometricas de borda dura, recortadas seguindo
+  o volume do objeto, sempre no lado oposto a luz principal. A sombra e uma
+  COR (tom mais escuro e levemente mais frio e saturado da base), nunca
+  preto puro nem cinza transparente.
+- LUZ: uma luz principal (chave) forte e direcional + uma luz de contorno
+  (rim light) fina e clara na borda oposta. Brilho (glow) apenas em
+  elementos emissivos (olhos, cristais, energia, fogo, sol).
+- TEXTURA: simplificada em manchas planas e formas recortadas (pedra,
+  madeira, tecido, grama, metal). Sem ruido fotografico, sem poros, sem
+  granulacao, sem aparencia de render 3D ou motor de jogo.
+- COMPOSICAO DE COR: proporcao 60/30/10 e contraste quente x frio entre
+  personagem e fundo. O maior contraste e a maior saturacao ficam no
+  ponto focal.
+
+[3] PALETA
+Cor principal (60%): [HEX ou nome]
+Cor complementar (30%): [HEX ou nome]
+Cor de destaque (10%): [HEX ou nome]
+Cor das sombras: [HEX ou nome]
+Cor da luz principal: [HEX ou nome]
+MODO AUTOMATICO (se algum campo estiver vazio): derive da imagem.
+Principal = matiz dominante; complementar = oposta no circulo cromatico;
+destaque = cor de um elemento ja existente (olhos, cristal, fogo, motor).
+
+[4] LUZ
+Direcao da luz principal: [ex.: alto-esquerda / contraluz atras / frontal]
+Cor da luz de contorno: [HEX ou nome]
+Raios de luz e volumes: somente se existirem na imagem original; desenhe
+como faixas planas semitransparentes de borda dura.
+
+[5] NEVOA E PROFUNDIDADE (CAMADA FINAL, ETAPA ADICIONAL)
+Defina primeiro cores e iluminacao acima. So depois adicione nevoa como
+acabamento: faixas suaves e chapadas, opacidade baixa (10 a 25%), no plano
+medio e no fundo, tingidas com a cor das sombras/ambiente. A nevoa NAO
+altera a paleta, NAO lava as cores, NAO muda a direcao da luz e NAO cobre
+personagens do primeiro plano nem o ponto focal. Ela aumenta com a
+distancia (perspectiva atmosferica): fundo mais claro, menos contraste,
+menos saturado; primeiro plano com contraste total.
+
+[6] SAIDA
+Uma unica imagem, mesma proporcao da original, alta resolucao, sem texto,
+sem marca d'agua, sem molduras.
+
+[7] EVITAR (LISTA FINAL)
+Personagens ou objetos novos; duplicatas; elementos fantasmas ou
+semitransparentes; troca de personagem, arma ou item; elementos copiados de
+outras imagens; estilo realista, 3D, render de jogo ou pintura a oleo;
+gradientes suaves e ruido; excesso de cores; sombras pretas; texto.
+
+==============================================================
+ STAGE B - RENDERING (EN, compact version; often more precise in Gemini)
+==============================================================
+
+TASK: IMAGE EDIT (restyle) of the attached image. Not a new creation.
+
+LOCKED (do not change): exact number of characters, each face/identity,
+pose, expression, outfit, accessories, held objects and weapons (shape and
+which hand), background, camera angle, framing, aspect ratio, position and
+relative size of every element, per the confirmed inventory. Only content
+that exists in the attached image is allowed. Original identity-defining
+geometry (e.g. blocky heads/bodies) stays the same.
+
+STYLE: professional 2D cartoon animation with cinematic lighting, cel-shaded.
+- Outline: clean continuous line, thicker on outer silhouette, thinner on
+  inner details; outline color = darker shade of the fill (never pure black).
+- Color: flat solid fills, no gradients inside objects. Max 3-4 tones per
+  material (base, shadow, light, optional rim). Hard edges between tones.
+- Shadows: hard-edged graphic geometric shapes following the form, opposite
+  the key light. Shadow is a color (darker, slightly cooler, more saturated
+  than the base), never black or transparent grey.
+- Light: one strong directional key light + one thin bright rim light on the
+  opposite edge. Glow only on emissive elements (eyes, crystals, energy,
+  fire, sun).
+- Texture: simplified into flat patches and cut shapes; no photographic
+  noise, no 3D or game-engine look.
+- Color composition: 60/30/10 ratio, warm vs cool contrast between subject
+  and background; highest contrast and saturation at the focal point.
+
+PALETTE: main (60%) [HEX] / complementary (30%) [HEX] / accent (10%) [HEX] /
+shadow [HEX] / key light [HEX]. If empty, derive from the image.
+LIGHT: key light direction [..]; rim light color [..].
+
+FOG (FINAL LAYER): after colors and lighting are set, add flat low-opacity
+(10-25%) fog bands in midground and background, tinted with the ambient
+shadow color. Fog must not change the palette, wash out colors, alter light
+direction, or cover foreground characters or the focal point. Atmospheric
+perspective: farther = lighter, less contrast, less saturation.
+
+OUTPUT: one image, same aspect ratio, high resolution, no text, no watermark.
+
+AVOID: new or duplicated characters/objects, ghost or semi-transparent
+elements, swapped characters or items, elements from other images, realistic
+or 3D or game-render look, soft gradients, noise, too many colors, black
+shadows, text.
